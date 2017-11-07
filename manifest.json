@@ -22,7 +22,7 @@
     "default_popup": "src/browser_action/browser_action.html"
   },
   "chrome_url_overrides": {
-    "newtab": "src/override/override.html"
+    "newtab": "src/newtab/newtab.html"
   },
   "permissions": [
     "chrome://favicon/",
