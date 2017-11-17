@@ -8,10 +8,12 @@ window.db = {
   },
   get: function(key, callback) {
     chrome.storage.sync.get(key, function(obj) { 
-      if (obj[key][0] === "{" || obj[key][0] === "[") {
+      if(!obj[key]) { 
+        callback('')
+      } else if (obj[key][0] === "{" || obj[key][0] === "[") {
         val = JSON.parse(obj[key]);
+        callback(val); 
       }
-      callback(val); 
     });
   },
   destroy: function() {

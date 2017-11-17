@@ -1,4 +1,7 @@
 $(document).on("ready", function() {
+  db.get("watchlist", function(e) {
+    if(!e) db.set("watchlist", []);
+  })
 
   Crypto.getTickers().success(function(response) {
     console.log(response);
@@ -32,4 +35,23 @@ $(document).on("ready", function() {
     var link = "https://coinmarketcap.com/currencies/" + $(this).data().id + "/";
     window.location.href = link;
   });
+
+
+  $.getJSON('../../js/tickers.json', function(d) {
+    $('#crypto-select').select2(
+      {data: d.results } 
+    );
+  })
+
+  $('#crypto-select').on('select2:select', function (e) {
+      var data = e.params.data;
+      Crypto.watch(data.ticker_id);
+  });
+
+  $('#crypto-select').on('select2:unselect', function (e) {
+      var data = e.params.data;
+      Crypto.unwatch(data.ticker_id);
+  });
+
 });
+
