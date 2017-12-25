@@ -1,8 +1,8 @@
 {
   "name": "CryptoDash",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "description": "Stay up to date with all latest cryptocurrency prices and news straight from your new tab page.",
+  "description": "Easiest way to check cryptocurrency prices from anywhere in chrome.",
   "homepage_url": "http://dillionverma.com",
   "icons": {
     "16": "icons/icon16.png",
@@ -11,23 +11,16 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": [
-      "src/bg/background.js"
-    ],
-    "persistent": false
+    "page": "src/bg/background.html",
+    "persistent": true
   },
   "browser_action": {
-    "default_icon": "icons/icon16.png",
-    "default_title": "Quick Prices",
+    "default_icon": "icons/icon19.png",
+    "default_title": "CryptoDash",
     "default_popup": "src/browser_action/browser_action.html"
   },
-  "chrome_url_overrides": {
-    "newtab": "src/newtab/newtab.html"
-  },
   "permissions": [
-    "chrome://favicon/",
-    "cookies",
-    "notifications",
-    "storage"
+    "tabs",
+    "chrome://favicon/"
   ]
 }

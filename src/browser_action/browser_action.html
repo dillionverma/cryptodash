@@ -1,17 +1,59 @@
-<!doctype html>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../../vendor/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../css/main.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <nav class="nav-extended blue">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">CryptoDash</a>
+      </div>
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a class="active" href="#prices">Prices</a></li>
+          <li class="tab disabled"><a href="#watchlist">Watchlist (coming soon)</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/browser_action/browser_action.html. The CSS is there, too.</p>
-</div>
+    <div id="prices" class="col s12 tab">
+      <div class="row">
+        <div class="col s12">
+          <div class="input-field searchBarMain">
+            <i class="material-icons searchBarSearchIcon noUserSelect">search</i>
+            <input type="text" name="header-search" value="" id="search" placeholder="Type to filter">
+            <i class="material-icons clearSearchBarField noUserSelect">clear</i>
+          </div>
+          <table id="ticker-table" class="highlight">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Symbol</th>
+                <th scope="col">Price</th>
+                <th scope="col">Change (1h)</th>
+                <th scope="col">Change (24h)</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="watchlist" class="col s12">Watchlist</div>
+
+
+    <script type="text/javascript" src="../../vendor/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../vendor/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../vendor/js/numeral.min.js"></script>
+    <script type="text/javascript" src="../../js/crypto.js"></script>
+    <script type="text/javascript" src="../../js/main.js"></script>
+  </body>
+</html>
+      
+
