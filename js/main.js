@@ -1,8 +1,9 @@
 var searchBarInput = $("#search");
 var clearSearchBtn = $(".clearSearchBarField");
+var refreshBtn = $("#refresh");
 
 $(document).ready(function(){
-
+  $(".loader").fadeOut(600);
   updateTable();
   searchBarInput.keyup(function() {
 		if( $(this).val().length === 0 ) {
@@ -14,6 +15,14 @@ $(document).ready(function(){
   clearSearchBtn.on('click', function() {
     $('#ticker-table tbody').empty();
     resetInput();
+    updateTable();
+  });
+
+  refreshBtn.on('click', function() {
+    $(".loader").fadeIn();
+    $('#ticker-table tbody').empty();
+    resetInput();
+    $(".loader").fadeOut(600);
     updateTable();
   });
 
