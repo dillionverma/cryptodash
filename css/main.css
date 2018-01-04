@@ -14,6 +14,20 @@ body {
   cursor: pointer;
 }
 
+#ticker-table thead {
+  margin-top: 5px;
+  background-color: white;
+  display:block;
+  position: sticky;
+  top:0px;
+}
+
+#ticker-table tbody, thead tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 td, th {
   padding: 8px 5px;
 }
@@ -23,7 +37,7 @@ h1 {
 }
 
 #refresh {
-  position: fixed;
+  position: absolute;
   color: white;
   right: 4px;
   top: -12px;
