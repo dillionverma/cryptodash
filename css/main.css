@@ -1,7 +1,7 @@
 body {
   width: 492px;
-
 }
+
 .tab {
   padding: 0px;
   height: 600px;
@@ -9,12 +9,15 @@ body {
   font-size: 1.25em;
   background-color: 
 }
+
 #ticker-table tbody tr {
   cursor: pointer;
 }
+
 td, th {
   padding: 8px 5px;
 }
+
 h1 {
   font-size: 2em;
 }
@@ -47,10 +50,6 @@ h1 {
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-  /*position: fixed;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*top: 0*/
 }
 
 .input-field input[type=text]:focus + label {
@@ -79,7 +78,6 @@ h1 {
 	background: transparent;
 	width: calc(100% - 85px);
 	outline: none;
-	/*padding-right: 32px;*/
 	font-size: 16px;
 	color: rgba(0, 0, 0, 0.76);
 	font-weight: 400;

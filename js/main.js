@@ -27,7 +27,6 @@ $(document).ready(function(){
   });
 
   $('#ticker-table').on('click', 'tbody tr', function(){
-    console.log("click");
     var link = "https://coinmarketcap.com/currencies/" + $(this).data().id + "/";
     chrome.tabs.create({ url: link });
   });
@@ -36,7 +35,6 @@ $(document).ready(function(){
        
 function updateTable() {
   $.get("https://api.coinmarketcap.com/v1/ticker/?limit=500").done(function(response) {
-    console.log(response);
     var rows = '';
     $.each(response, function (i, item) {
       $tr = '<tr data-symbol="' + item.symbol + '" data-id="' + item.id + '">';
