@@ -173,3 +173,9 @@ h1 {
     height: 5em;
   }
 }
+
+
+/*fixes*/
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: inherit;
+}
