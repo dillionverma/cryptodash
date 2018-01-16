@@ -20,6 +20,7 @@ body {
   display:block;
   position: sticky;
   top:0px;
+  z-index: 999;
 }
 
 #ticker-table tbody, thead tr {

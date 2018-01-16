@@ -16,7 +16,6 @@ chrome.storage.sync.get("watchlist-switch", function(vals) {
 });
 
 $(document).ready(function(){
-  $(".loader").fadeOut(600);
   updateTable();
   searchBarInput.keyup(function() {
 		if( $(this).val().length === 0 ) {
@@ -32,10 +31,8 @@ $(document).ready(function(){
   });
 
   refreshBtn.on('click', function() {
-    $(".loader").fadeIn();
     $('#ticker-table tbody').empty();
     resetInput();
-    $(".loader").fadeOut(600);
     updateTable();
   });
 
@@ -47,7 +44,9 @@ $(document).ready(function(){
 });
        
 function updateTable() {
+  $(".loader").fadeIn();
   $.get("https://api.coinmarketcap.com/v1/ticker/?limit=500").done(function(response) {
+    $(".loader").fadeOut(600);
     chrome.storage.sync.get("watchlist", function (d) {
       var rows = '';
       $.each(response, function (i, item) {
@@ -71,7 +70,7 @@ function updateTable() {
         }
 
         rows += $tr + 
-                    '<td>' + item.rank                                                          + '</td>' + 
+                    '<td style="width:28px">' + item.rank                                                          + '</td>' + 
                     '<td>' + item.name                                                          + '</td>' + 
                     '<td>' + item.symbol                                                        + '</td>' + 
                     '<td>' + numeral(item.price_usd).format('$0,0.00[000]')                     + '</td>' + 
@@ -104,6 +103,11 @@ function updateTable() {
       tableSearch();
       watchlist();
     });
+  }).fail(function(e) {
+    console.log("fail");
+    setTimeout(function () {
+      updateTable();
+    }, 4000)
   });
 }
 
