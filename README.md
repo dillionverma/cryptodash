@@ -2,10 +2,15 @@
 
 A new tab chrome extension which allows you to stay up to date with latest cryptocurrency prices and news
 
+![Cryptodash Screenshot](https://github.com/dillionverma/cryptodash/blob/master/screenshot.png)
+[![chrome store](https://img.shields.io/chrome-web-store/v/ondfffdahobjdccncjcbfbpliofbeeda.svg)](https://chrome.google.com/webstore/detail/cryptodash/ondfffdahobjdccncjcbfbpliofbeeda)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/ondfffdahobjdccncjcbfbpliofbeeda.svg)](https://chrome.google.com/webstore/detail/cryptodash/ondfffdahobjdccncjcbfbpliofbeeda)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/ondfffdahobjdccncjcbfbpliofbeeda.svg)](https://chrome.google.com/webstore/detail/cryptodash/ondfffdahobjdccncjcbfbpliofbeeda)
+[![license](https://img.shields.io/github/license/dillionverma/crypto-cli.svg)](https://github.com/dillionverma/crypto-cli)
+
 # Installation
 
- * _chrome store link coming soon_
- 
+[![Chrome web store download link](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://chrome.google.com/webstore/detail/cryptodash/ondfffdahobjdccncjcbfbpliofbeeda)
 
 # Contributing
 
