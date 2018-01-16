@@ -18,11 +18,11 @@ chrome.storage.sync.get("watchlist-switch", function(vals) {
 $(document).ready(function(){
   updateTable();
   searchBarInput.keyup(function() {
-		if( $(this).val().length === 0 ) {
-			clearSearchBtn.hide()
-		} else {
-			clearSearchBtn.show()
-		}
+    if( $(this).val().length === 0 ) {
+      clearSearchBtn.hide()
+    } else {
+      clearSearchBtn.show()
+    }
 	});
   clearSearchBtn.on('click', function() {
     $('#ticker-table tbody').empty();
@@ -70,7 +70,7 @@ function updateTable() {
         }
 
         rows += $tr + 
-                    '<td style="width:28px">' + item.rank                                                          + '</td>' + 
+                    '<td style="width:28px">' + item.rank                                       + '</td>' + 
                     '<td>' + item.name                                                          + '</td>' + 
                     '<td>' + item.symbol                                                        + '</td>' + 
                     '<td>' + numeral(item.price_usd).format('$0,0.00[000]')                     + '</td>' + 
@@ -145,6 +145,6 @@ function watchlist() {
 
 
 function resetInput() {
-	clearSearchBtn.hide();
-	searchBarInput.val('').focus();
+  clearSearchBtn.hide();
+  searchBarInput.val('').focus();
 }
