@@ -37,7 +37,7 @@ $(document).ready(function(){
   });
 
   $('#ticker-table').on('click', 'tbody tr td:nth-child(-n+6)', function(){
-    var link = "https://coinmarketcap.com/currencies/" + $(this).data().id + "/";
+    var link = "https://coinmarketcap.com/currencies/" + $(this).parent().data().id + "/";
     chrome.tabs.create({ url: link });
   });
 
