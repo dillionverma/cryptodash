@@ -8,6 +8,8 @@ A new tab chrome extension which allows you to stay up to date with latest crypt
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/rating/ondfffdahobjdccncjcbfbpliofbeeda.svg)](https://chrome.google.com/webstore/detail/cryptodash/ondfffdahobjdccncjcbfbpliofbeeda)
 [![license](https://img.shields.io/github/license/dillionverma/crypto-cli.svg)](https://github.com/dillionverma/crypto-cli)
 
+<a href="https://www.producthunt.com/posts/cryptodash-2?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cryptodash-2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=119017&theme=light" alt="CryptoDash - A crypto price tracker chrome extension | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+
 # Installation
 
 [![Chrome web store download link](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://chrome.google.com/webstore/detail/cryptodash/ondfffdahobjdccncjcbfbpliofbeeda)
